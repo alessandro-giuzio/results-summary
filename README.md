@@ -19,8 +19,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/alessandro-giuzio/results-summary)
-- Live Site URL: [Add live site URL here](https://results-summary-frontendmentor-challe.netlify.app/)
+- Solution URL: [https://github.com/alessandro-giuzio/results-summary](https://github.com/alessandro-giuzio/results-summary)
+- Live Site URL: [https://results-summary-frontendmentor-challe.netlify.app/)](https://results-summary-frontendmentor-challe.netlify.app/)
 
 ### Built with
 
