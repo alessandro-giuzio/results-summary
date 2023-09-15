@@ -20,7 +20,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/alessandro-giuzio/results-summary](https://github.com/alessandro-giuzio/results-summary)
-- Live Site URL: [https://results-summary-frontendmentor-challe.netlify.app/)](https://results-summary-frontendmentor-challe.netlify.app/)
+- Live Site URL: [https://results-summary-frontendmentor-challe.netlify.app/](https://results-summary-frontendmentor-challe.netlify.app/)
 
 ### Built with
 
