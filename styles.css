@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+/* Custom properties */
+:root {
+  --spacer: 1rem;
+
+  --clr-light-red: hsl(0, 100%, 67%);
+  --clr-orangey-yellow: hsl(39, 100%, 56%);
+  --clr-green-teal: hsl(166, 100%, 37%);
+  --clr-cobalt-blue: hsl(234, 85%, 45%);
+
+  // Gradients
+  --clr-slate-blue-background: hsl(252, 100%, 67%);
+  --clr-royal-blue-background: hsl(241, 81%, 54%)
+
+  --clr-violet-blue-circle: hsla(256, 72%, 46%, 1);
+  --clr-persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-pale-blue: hsl(221, 100%, 96%);
+  --clr-light-lavender: hsl(241, 100%, 89%);
+  --clr-gray-blue: hsl(224, 30%, 27%);
+
+  // Use transparency to get the colour variations necessary to match the design. Hint: look into using `hsla()`.
+
+  --ff-primary: 'PT Sans', sans-serif;
+
+  --fs-700: 2.25rem;
+  --fs-600: 1.5rem;
+  --fs-500: 1.25rem;
+  --fs-400: 1.125rem;
+  --fs-300: 0.9375rem;
+
+  --fw-700: 700;
+  --fw-400: 400;
+
+  --box-shadow: 0 0.25em 1.5em rgba(0, 0, 0, 0.15);
+}
+
+/* --------------------- */
+/* Reset                 */
+/* -------------------- */
+
+/* Box Sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  line-height: 1.5;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Make forms easier to work with */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animation for people who've turned them off */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Images */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* --------------------- */
+/* Utility classes       */
+/* -------------------- */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
+
+
+.grid-container {
+  display: grid;
+}
+
+/* general styling */
+
+html,
+body {
+  height: 100%;
+}
+/* Set core body defaults */
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: var(--clr-pale-blue);
+}
+
+/* general layout */
+
+@media (min-width: 40rem) {
+  .split {
+    flex-direction: row;
+  }
+}
+
+/* Components */
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: hsl(221, 100%, 96%);
+  padding: 0.75em 1.5em;
+  background-color: hsl(224, 30%, 27%);
+  border-radius: 1.75rem;
+  margin-top:1rem;
+}
+
+p {
+  font-size: 18px;
+}
+
+/* individual sections */
+.wrapper {
+
+  margin: 10rem  auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: var(--clr-light-lavender);
+}
+
+.container {
+  display: flex;
+}
+
+.left {
+  background-image: linear-gradient(
+    hsl(252, 100%, 67%) 10%,
+    hsl(241, 81%, 54%) 60%
+  );
+  max-width: 40ch;
+  border-radius: 1rem;
+  border: 2px solid var(--clr-royal-blue-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:1.5rem;
+  padding:2rem 3rem
+}
+
+.circle {
+  background-image: linear-gradient(
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+);
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.circle span {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--clr-white);
+}
+
+.circle p {
+  color: var(--clr-light-lavender);
+}
+
+h4 {
+  color: var(--clr-white);
+  font-size: 2rem;
+}
+
+.left p:last-of-type {
+  max-width: 35ch;
+  text-align: center;
+  color: var(--clr-light-lavender);
+}
+
+.right {
+  background-color: var(--clr-white);
+  border-radius: 0 1rem 1rem 0;
+  box-shadow: var(--box-shadow);
+  /* border: 1px solid var(--clr-light-lavender); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40ch;
+  transform: translateX(-.5rem);
+  z-index:-1;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 2px solid var(--clr-light-lavender);
+  height: 100%;
+  padding: 2rem 3rem;
+}
+
+
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat div {
+  display: flex;
+  gap: .5rem;
+}
+
+.reaction.stat {
+  border:1px solid hsla(0, 100%, 67%, 0.2);
+  background-color: hsla(0, 100%, 67%, 0.2);
+  padding:7px 13px;
+  border-radius: 5px;
+}
+.reaction.stat p {
+  color: red;
+  font-size: 16px;
+}
+
+.memory.stat {
+  border:1px solid hsla(39, 100%, 56%, 0.2);
+  background-color: hsla(39, 100%, 56%, 0.2);
+  padding:7px 13px;
+  border-radius: 5px;
+}
+
+.memory.stat p {
+  color: hsl(39, 100%, 56%);
+  font-size: 16px;
+}
+
+.verbal.stat {
+  border:1px solid hsla(166, 100%, 37%, 0.2);
+  background-color: hsla(166, 100%, 37%, 0.2);
+  padding:7px 13px;
+  border-radius: 5px;
+}
+
+.verbal.stat p {
+  color: hsl(166, 100%, 37%);
+  font-size: 16px;
+}
+
+.visual.stat {
+  border:1px solid hsla(234, 85%, 45%, 0.2);
+  background-color: hsla(234, 85%, 45%, 0.2);
+  padding:7px 13px;
+  border-radius: 5px;
+}
+
+.visual.stat p {
+  color: hsl(234, 85%, 45%);
+  font-size: 16px;
+}
+
+
+@media (max-width:375px){
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .right {
+    transform: translateY(-50px);
+    margin-top: 2rem;
+  }
+}
