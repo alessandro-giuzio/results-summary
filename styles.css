@@ -183,6 +183,10 @@ body {
   text-rendering: optimizeSpeed;
   font-family: 'Hanken Grotesk', sans-serif;
   background-color: var(--clr-pale-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* general layout */
@@ -205,8 +209,6 @@ p {
 
 /* individual sections */
 .wrapper {
-
-  margin: 10rem  auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -276,7 +278,7 @@ h4 {
   background-color: var(--clr-white);
   border-radius: 0 1rem 1rem 0;
   box-shadow: var(--box-shadow);
-  /* border: 1px solid var(--clr-light-lavender); */
+  border: 1px solid var(--clr-light-lavender);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -289,7 +291,6 @@ h4 {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  border: 2px solid var(--clr-light-lavender);
   height: 100%;
   padding: 2rem 3rem;
 }
